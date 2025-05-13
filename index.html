@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Care Hospital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: #005a87;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 2rem;
+    }
+    .hero {
+  background: linear-gradient(to right, #005c97, #363795); /* Darker gradient */
+  color: #ffffff; /* White text */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    footer {
+      background: #003c5a;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .fade-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px; /* or adjust as needed */
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.fade-carousel img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.fade-carousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="Nova Care Hospital Logo" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#departments">Departments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+<section class="hero text-center text-white py-5">
+  <script>
+  let current = 0;
+  const slides = document.querySelectorAll('.fade-slide');
+  const total = slides.length;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % total;
+    slides[current].classList.add('active');
+  }, 4000); // Change image every 4 seconds
+</script>
+  <div class="fade-carousel">
+    <img src="images/1.jpeg" class="fade-slide active" alt="Hospital Image 1" />
+    <img src="images/2.jpeg" class="fade-slide" alt="Hospital Image 2" />
+    <img src="images/3.jpeg" class="fade-slide" alt="Hospital Image 3" />
+  </div>
+  <h1>Welcome to Nova Care Hospital</h1>
+  <p>Compassionate. Innovative. Trusted Healthcare.</p>
+</section>
+
+  <!--<section class="hero text-center text-white py-5">
+  <div class="overflow-hidden h-16">
+    <div class="animate-slideText whitespace-nowrap text-4xl font-bold">
+      Welcome to Nova Care Hospital
+    </div>
+  </div>
+  <p class="mt-2 text-lg">Compassionate. Innovative. Trusted Healthcare.</p>
+
+  <div id="galleryCarousel" class="carousel slide mt-5" data-bs-ride="carousel" style="max-width: 800px; margin: 0 auto;">
+    <div class="fade-carousel">
+  <img src="images/1.jpeg" class="fade-slide active" alt="Hospital Image 1" />
+  <img src="images/2.jpeg" class="fade-slide" alt="Hospital Image 2" />
+  <img src="images/3.jpeg" class="fade-slide" alt="Hospital Image 3" />
+</div>
+  </div>
+</section> -->
+
+  <section id="about">
+    <h2>Mission</h2>
+    <p>To provide compassionate, high-quality healthcare that is accessible, affordable, and tailored to meet the needs of every patient.</p>
+    <h2>Vision</h2>
+    <p>To be a leading healthcare institution known for excellence in patient care, medical research, and clinical expertise.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>24/7 Emergency Care</li>
+      <li>Outpatient & Inpatient Services</li>
+      <li>Preventive Health Check-ups</li>
+      <li>Diagnostic Imaging (X-Ray, MRI, CT, Ultrasound)</li>
+      <li>Pathology & Laboratory Services</li>
+      <li>Pharmacy Services</li>
+      <li>Daycare Procedures & Minor Surgeries</li>
+      <li>Health Counseling & Rehabilitation</li>
+      <li>Home Healthcare Services</li>
+    </ul>
+  </section>
+
+  <section id="departments">
+    <h2>Departments</h2>
+    <div class="grid">
+      <div><strong>Cardiology</strong>: Advanced heart care and cardiac rehab</div>
+      <div><strong>Neurology</strong>: Brain & nervous system care</div>
+      <div><strong>Orthopedics</strong>: Bone, joint & spine care</div>
+      <div><strong>General Medicine</strong>: Acute and chronic condition care</div>
+      <div><strong>Pediatrics</strong>: Child healthcare and immunizations</div>
+      <div><strong>Gynecology</strong>: Women’s health & maternity</div>
+      <div><strong>Oncology</strong>: Multidisciplinary cancer treatment</div>
+      <div><strong>Gastroenterology</strong>: Digestive diagnostics and procedures</div>
+      <div><strong>ENT</strong>: Ear, nose, and throat care</div>
+      <div><strong>Dermatology</strong>: Skin, hair, and nail care</div>
+      <div><strong>Nephrology</strong>: Kidney health and dialysis</div>
+      <div><strong>Pulmonology</strong>: Respiratory and lung treatment</div>
+      <div><strong>Urology</strong>: Urinary tract & male health</div>
+      <div><strong>Anesthesiology</strong>: Pain management for surgeries</div>
+      <div><strong>Psychiatry</strong>: Mental health & counseling</div>
+    </div>
+  </section>
+
+  <section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 
+    <a href="tel:999999999">999999999</a>, 
+    <a href="tel:1111111111">1111111111</a>
+  </p>
+  <p>Email: 
+    <a href="mailto:novahospital@gmail.com">novahospital@gmail.com</a>
+  </p>
+  <p>Address: Nova Care Hospital, Nanpura, Behraich</p>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Nova Care Hospital. All rights reserved.</p>
+  </footer>
+</body>
+</html>
